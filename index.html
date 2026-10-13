@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وفاء — حكايتنا 🤍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="passwordGate" class="password-gate">
+  <div class="password-card">
+    <div class="password-heart">♡</div>
+    <div class="tiny">A LITTLE SECRET FOR WAFAA</div>
+    <h1>حكايتنا ليها مفتاح…</h1>
+    <p>في كلام معمول عشانك انتي وبس يا وفاء 🤍<br>اكتبي الباسورد عشان تفتحي قلبّي وتدخلي حكايتنا.</p>
+    <form id="passwordForm">
+      <label class="sr-only" for="passwordInput">الباسورد</label>
+      <input id="passwordInput" type="password" inputmode="numeric" autocomplete="off" placeholder="اكتبي الباسورد هنا" aria-label="الباسورد" required>
+      <button type="submit" class="start-btn"><span>افتحي حكايتنا 🤍</span><i>♡</i></button>
+      <div id="passwordError" role="alert" aria-live="polite"></div>
+    </form>
+    <div class="hint">سر صغير بيني وبينك ✨</div>
+  </div>
+</div>
+<div id="loader">
+  <div class="loader-stars" id="loaderStars"></div>
+  <div class="loader-heart">♡</div>
+  <div class="loader-title">WAFAA 🤍</div>
+  <div class="loader-sub">loading our little story...</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<div class="grain"></div>
+<div class="stars" id="stars"></div>
+<div class="aurora aurora-a"></div><div class="aurora aurora-b"></div>
+<div class="hearts" id="hearts"></div>
+
+<main id="app">
+<section class="opening" id="opening">
+  <div class="opening-content">
+    <div class="tiny">A STORY MADE FOR WAFAA</div>
+    <div class="orb">♡</div>
+    <div class="opening-line">وفاء...</div>
+    <h1>في حكاية صغيرة<br><span>نفسي احكيهالك.</span></h1>
+    <p>مش مجرد رسالة ولا صورة.<br>دي حكايتنا… وكل الكلام اللي قلبي نفسه يقولهولك.</p>
+    <button class="start-btn" id="startBtn"><span>ابدئي الحكاية 🤍</span><i>↗</i></button>
+    <div class="hint">خدي وقتك… واسكرولي براحتك.</div>
+  </div>
+</section>
+
+<section class="story hidden" id="story">
+  <header class="story-top">
+    <div class="profile">
+      <div class="avatar">W</div>
+      <div><strong>Wafaa</strong><small>حكايتنا سوا · <span>من ٢ سبتمبر ٢٠٢٦</span></small></div>
+    </div>
+    <div class="counter"><span id="counter">01</span><b>/</b> 15</div>
+  </header>
+
+  <div class="scroll-progress"><span id="progress"></span></div>
+
+  <div class="messages" id="messages"></div>
+
+  <div class="story-controls">
+    <button id="nextBtn">اسكرولي لتحت <b>↓</b></button>
+    <button id="finishBtn" class="finish-btn hidden">انهاء الحكاية ♡</button>
+  </div>
+</section>
+
+<section class="ending hidden" id="ending">
+  <div class="ending-glow"></div>
+  <div class="tiny">ONE LAST THING</div>
+  <h2>احلى صدفة<br><span>حصلت في حياتي.</span></h2>
+  <p>ومش عايز الصدفة دي تكون مجرد ذكرى…<br>نفسي ربنا يديمك ليا ويخلي اللي جاي احلى.</p>
+
+  <div class="final-photo">
+    <img src="photo.jpeg" alt="Wafaa">
+    <div class="photo-shine"></div>
+    <div class="photo-caption">يا أجمل حاجة في حياتي يا وفاء 🤍</div>
+  </div>
+
+  <div class="final-message">
+    <div class="final-quote">"بجد انتي حبيبتي واختي وصاحبتي… وربنا يديمك ليا." 🤍</div>
+    <p>
+      من اول نظرة لاول كلام لاول اعتراف لحد الـ41 يوم دول…
+      كل حاجة حصلت بينا بقت من الحاجات اللي مستحيل احب انساها.
+    </p>
+  </div>
+
+  <div class="signature">02/09/2026 ← 24/09/2026 ← 09/10/2026 · <b>حكايتنا لسه بتبدأ 🤍</b></div>
+  <button class="replay" id="replay">نعيشها من الاول ♡</button>
+</section>
+</main>
+
+<audio id="bgMusic" preload="auto" loop><source src="music.mp3" type="audio/mpeg"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
